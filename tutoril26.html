@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS selectors</title>
+    <style>
+        body{
+            border: 10px solid white;
+            background-color: burlywood;
+            font-size: 2rem;
+            border-radius: 10px;
+        }
+        /*this causes changing direct to the p which are lying anywhere int he content*/
+        /*p{
+            font-size: 20px;
+            color: green;
+            text-align: center;
+        }*/
+
+        /*the styling will be applied to all <p> elements which are the direct child of any div element*/
+       /* div>p{
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: aqua; */
+         
+            /*There might be situations where you want to select the <p> tags that are immediately after the <div> elements. In such cases, we use the div+p selectors.*/
+            div+p{
+                font-size: 40px;
+                 background-color: black;
+                 color: white;
+                 font-size: 2rem;
+                 border:5px solid yellowgreen
+            }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <p>This is inside the item</p>
+            <ul><li><p>This is inside the list</p></li></ul>
+        </div>
+        
+        <p>This is outside the item</p>
+    </div>
+    <p>This is outside of the container </p>
+</body>
+</html>
